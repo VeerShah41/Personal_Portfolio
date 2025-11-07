@@ -64,7 +64,7 @@ const Home = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            Web Developer
+            Full Stack Developer
           </motion.p>
           <motion.a
             href="#contact"
@@ -72,7 +72,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 1.4 }}
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 255, 238, 0.5)' }}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(99, 102, 241, 0.5)' }}
             whileTap={{ scale: 0.95 }}
             onClick={(e) => {
               e.preventDefault()

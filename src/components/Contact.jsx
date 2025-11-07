@@ -24,7 +24,7 @@ const Contact = () => {
         </motion.p>
         <div className="contact-details">
           <motion.a
-            href="mailto:veershah0013@gmail.com"
+            href="mailto:veer.shah@adypu.edu.in"
             className="contact-link"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -33,7 +33,7 @@ const Contact = () => {
             whileTap={{ scale: 0.95 }}
           >
             <i className="bx bx-envelope" />
-            veershah0013@gmail.com
+            veer.shah@adypu.edu.in
           </motion.a>
           <motion.a
             href="tel:+919316375749"

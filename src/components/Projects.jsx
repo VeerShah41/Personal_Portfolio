@@ -9,22 +9,25 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Sales Management System',
-      description: 'A web-based application to manage sales and inventory efficiently.',
-      hostedLink: 'https://github.com/VeerShah41/sales-management-system',
-      githubLink: 'https://github.com/VeerShah41/sales-management-system'
+      title: 'Expanse Tracker',
+      date: 'August 2025',
+      description: 'Developed category-wise tracking with real-time expense summaries to monitor spending trends. Used React Native and React Context API for state management across components.',
+      githubLink: 'https://github.com/VeerShah41/Expense-Tracker-App',
+      demoLink: null // Not deployed yet
     },
     {
-      title: 'Board Game',
-      description: 'An interactive board game built using JavaScript and HTML5 Canvas.',
-      hostedLink: 'https://board-game-iota.vercel.app',
-      githubLink: 'https://github.com/VeerShah41/board-game'
+      title: 'Notes Keeper',
+      date: 'March 2025',
+      description: 'Built a cross-platform Notes Keeper app with login authentication for secure user access. Implemented CRUD operations and search functionality for efficient note management using React.',
+      githubLink: 'https://github.com/VeerShah41/notes-keeper',
+      demoLink: 'https://notes-keeper-ashy.vercel.app/'
     },
     {
       title: 'Movie Review Blog',
-      description: 'A blog platform for users to share and read movie reviews.',
-      hostedLink: 'https://parthz-13.github.io/MovieReviewBlog/',
-      githubLink: 'https://github.com/VeerShah41/movie-review-blog'
+      date: 'November 2024',
+      description: 'Designed a user-friendly interface with clean layout, readability, and light/dark theme toggling. Used HTML, CSS, and JavaScript to practice iterative development and design UI/UX components.',
+      githubLink: 'https://github.com/parthz-13/MovieReviewBlog',
+      demoLink: 'https://parthz-13.github.io/MovieReviewBlog/'
     }
   ]
 
@@ -55,19 +58,28 @@ const Projects = () => {
             transition={{ duration: 0.6, delay: 0.2 + index * 0.15, ease: 'easeOut' }}
             whileHover={{ scale: 1.03, y: -5 }}
           >
-            <h3>{project.title}</h3>
+            <div className="project-header">
+              <h3>{project.title}</h3>
+              <span className="project-date">{project.date}</span>
+            </div>
             <p>{project.description}</p>
             <div className="project-links">
-              <motion.a
-                href={project.hostedLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="code-link"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Hosted Link
-              </motion.a>
+              {project.demoLink ? (
+                <motion.a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="code-link"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Demo
+                </motion.a>
+              ) : (
+                <span className="code-link disabled" style={{ opacity: 0.5, cursor: 'not-allowed' }}>
+                  Demo (Not Deployed)
+                </span>
+              )}
               <motion.a
                 href={project.githubLink}
                 target="_blank"
@@ -76,7 +88,7 @@ const Projects = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                GitHub Repository
+                GitHub
               </motion.a>
             </div>
           </motion.div>

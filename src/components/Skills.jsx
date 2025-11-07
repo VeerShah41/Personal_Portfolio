@@ -11,28 +11,34 @@ const Skills = () => {
     {
       title: 'Computer Languages',
       skills: [
-        { name: 'Python', icon: 'bx bxl-python' },
         { name: 'JavaScript', icon: 'bx bxl-javascript' },
+        { name: 'CSS', icon: 'bx bxl-css3' },
         { name: 'HTML', icon: 'bx bxl-html5' },
-        { name: 'CSS', icon: 'bx bxl-css3' }
+        { name: 'Python', icon: 'bx bxl-python' }
       ]
     },
     {
       title: 'Software Packages',
       skills: [
         { name: 'MySQL', icon: 'bx bxs-data' },
-        { name: 'Pandas', icon: 'bx bxl-python' },
+        { name: 'Express JS', icon: 'bx bx-server' },
+        { name: 'Node.js', icon: 'bx bxl-nodejs' },
+        { name: 'React', icon: 'bx bxl-react' },
+        { name: 'Prisma ORM', icon: 'bx bx-data' },
+        { name: 'React Native', icon: 'bx bx-mobile-alt' },
         { name: 'Matplotlib', icon: 'bx bx-bar-chart-alt-2' },
-        { name: 'Git', icon: 'bx bxl-git' }
+        { name: 'Pandas', icon: 'bx bxl-python' }
       ]
     },
     {
-      title: 'Soft Skills',
+      title: 'Data Tools & Soft Skills',
       skills: [
-        { name: 'Problem-Solving', icon: 'bx bx-brain' },
-        { name: 'Team Collaboration', icon: 'bx bx-group' },
-        { name: 'Time Management', icon: 'bx bx-time' },
-        { name: 'Adaptability', icon: 'bx bx-refresh' }
+        { name: 'NumPy', icon: 'bx bx-math' },
+        { name: 'Presentation Skills', icon: 'bx bx-presentation' },
+        { name: 'Responsibility', icon: 'bx bx-check-circle' },
+        { name: 'Teamwork', icon: 'bx bx-group' },
+        { name: 'Creativity', icon: 'bx bx-bulb' },
+        { name: 'Time Management', icon: 'bx bx-time' }
       ]
     }
   ]
@@ -72,7 +78,7 @@ const Skills = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.4 + categoryIndex * 0.15 + skillIndex * 0.08, ease: 'easeOut' }}
-                  whileHover={{ x: 8, color: '#00ffee' }}
+                  whileHover={{ x: 8, color: '#6366f1' }}
                 >
                   <i className={skill.icon} />
                   {skill.name}

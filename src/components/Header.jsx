@@ -7,8 +7,10 @@ const Header = ({ activeSection }) => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
     { id: 'Skills', label: 'Skills' },
+    { id: 'certifications', label: 'Certifications' },
     { id: 'Social', label: 'Social' },
     { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' }
