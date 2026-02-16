@@ -28,7 +28,7 @@ const About = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
         >
-          Full Stack learner currently studying Computer Science with a specialization in AI and Machine Learning. Proficient with Python, MySQL, React Native, and JavaScript. Looking for opportunities to apply my technical skills and gain real-world experience through collaborative projects and industry exposure.
+          Aspiring software developer pursuing a degree in Computer Science with a specialization in AI and ML. Experienced in full-stack development using Python, MySQL, JavaScript, React, and React Native. Currently expanding expertise in Machine Learning and DevOps.
         </motion.p>
       </motion.div>
     </section>

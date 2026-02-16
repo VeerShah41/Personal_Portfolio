@@ -10,9 +10,9 @@ const Education = () => {
   const education = [
     {
       degree: 'Bachelor of Technology (AI ML)',
-      period: '2024 - 2025',
+      period: '2024 - 2028',
       institution: 'Newton School OF Technology (ADYPU), Pune',
-      grade: 'Grade: 8.0/10.0'
+      grade: 'Grade: 8.03/10.0'
     },
     {
       degree: 'Intermediate (Class XII)',

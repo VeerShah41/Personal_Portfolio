@@ -8,10 +8,9 @@ const Social = () => {
   })
 
   const socialLinks = [
-    { name: 'LinkedIn', url: '#', icon: 'bx bxl-linkedin' }, // Please provide LinkedIn link
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/veer-shah-a6a146236', icon: 'bx bxl-linkedin' },
     { name: 'GitHub', url: 'https://github.com/VeerShah41', icon: 'bx bxl-github' },
-    { name: 'Leetcode', url: 'https://leetcode.com/u/Solo_Sorcerer/', icon: 'bx bx-code-alt' },
-    { name: 'Portfolio', url: '#', icon: 'bx bx-globe' } // Please provide Portfolio link
+    { name: 'Leetcode', url: 'https://leetcode.com/u/Veer_Shah_41/', icon: 'bx bx-code-alt' }
   ]
 
   return (

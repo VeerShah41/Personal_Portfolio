@@ -64,7 +64,7 @@ const Home = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            Full Stack Developer
+            Aspiring Software Developer
           </motion.p>
           <motion.a
             href="#contact"

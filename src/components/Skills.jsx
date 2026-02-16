@@ -9,36 +9,58 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Computer Languages',
+      title: 'Languages',
       skills: [
+        { name: 'Python', icon: 'bx bxl-python' },
+        { name: 'TypeScript', icon: 'bx bxl-typescript' },
         { name: 'JavaScript', icon: 'bx bxl-javascript' },
-        { name: 'CSS', icon: 'bx bxl-css3' },
+        { name: 'SQL', icon: 'bx bxs-data' },
         { name: 'HTML', icon: 'bx bxl-html5' },
-        { name: 'Python', icon: 'bx bxl-python' }
+        { name: 'CSS', icon: 'bx bxl-css3' }
       ]
     },
     {
-      title: 'Software Packages',
-      skills: [
-        { name: 'MySQL', icon: 'bx bxs-data' },
-        { name: 'Express JS', icon: 'bx bx-server' },
-        { name: 'Node.js', icon: 'bx bxl-nodejs' },
-        { name: 'React', icon: 'bx bxl-react' },
-        { name: 'Prisma ORM', icon: 'bx bx-data' },
-        { name: 'React Native', icon: 'bx bx-mobile-alt' },
-        { name: 'Matplotlib', icon: 'bx bx-bar-chart-alt-2' },
-        { name: 'Pandas', icon: 'bx bxl-python' }
-      ]
-    },
-    {
-      title: 'Data Tools & Soft Skills',
+      title: 'Data Science',
       skills: [
         { name: 'NumPy', icon: 'bx bx-math' },
-        { name: 'Presentation Skills', icon: 'bx bx-presentation' },
-        { name: 'Responsibility', icon: 'bx bx-check-circle' },
-        { name: 'Teamwork', icon: 'bx bx-group' },
+        { name: 'Pandas', icon: 'bx bxl-python' },
+        { name: 'Matplotlib', icon: 'bx bx-bar-chart-alt-2' }
+      ]
+    },
+    {
+      title: 'Frameworks & Libraries',
+      skills: [
+        { name: 'React', icon: 'bx bxl-react' },
+        { name: 'Next.js', icon: 'bx bx-code-block' },
+        { name: 'React Native', icon: 'bx bx-mobile-alt' },
+        { name: 'Node.js', icon: 'bx bxl-nodejs' },
+        { name: 'Express.js', icon: 'bx bx-server' }
+      ]
+    },
+    {
+      title: 'Databases & ORM',
+      skills: [
+        { name: 'MySQL', icon: 'bx bxs-data' },
+        { name: 'MongoDB', icon: 'bx bxl-mongodb' },
+        { name: 'Prisma ORM', icon: 'bx bx-data' }
+      ]
+    },
+    {
+      title: 'Tools & Coursework',
+      skills: [
+        { name: 'Excel', icon: 'bx bx-spreadsheet' },
+        { name: 'Git/GitHub', icon: 'bx bxl-github' },
+        { name: 'Data Structures', icon: 'bx bx-code-curly' }
+      ]
+    },
+    {
+      title: 'Soft Skills',
+      skills: [
+        { name: 'Time Management', icon: 'bx bx-time' },
         { name: 'Creativity', icon: 'bx bx-bulb' },
-        { name: 'Time Management', icon: 'bx bx-time' }
+        { name: 'Teamwork', icon: 'bx bx-group' },
+        { name: 'Responsibility', icon: 'bx bx-check-circle' },
+        { name: 'Presentation Skills', icon: 'bx bx-presentation' }
       ]
     }
   ]

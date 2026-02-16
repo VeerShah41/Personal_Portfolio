@@ -9,23 +9,30 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Asset Tracker',
+      date: 'September 2024',
+      description: 'Full-stack inventory management system built with React, Node.js, Express, and MySQL. Integrated RESTful APIs and JWT authentication for secure login. Utilized Prisma ORM for database interaction and data integrity.',
+      githubLink: 'https://github.com/VeerShah41/AP-Inventory-Asset-Tracker',
+      demoLink: 'https://ap-inventory-asset-tracker-la4y.vercel.app/'
+    },
+    {
       title: 'Expanse Tracker',
-      date: 'August 2025',
-      description: 'Developed category-wise tracking with real-time expense summaries to monitor spending trends. Used React Native and React Context API for state management across components.',
+      date: 'August 2024',
+      description: 'Category-wise expense tracking application built with React Native. Features data visualization for better financial tracking. Used Context API for efficient global state management.',
       githubLink: 'https://github.com/VeerShah41/Expense-Tracker-App',
-      demoLink: null // Not deployed yet
+      demoLink: null
     },
     {
       title: 'Notes Keeper',
-      date: 'March 2025',
-      description: 'Built a cross-platform Notes Keeper app with login authentication for secure user access. Implemented CRUD operations and search functionality for efficient note management using React.',
+      date: 'March 2024',
+      description: 'Note-taking web application for managing personal notes using HTML, CSS, and JavaScript.',
       githubLink: 'https://github.com/VeerShah41/notes-keeper',
       demoLink: 'https://notes-keeper-ashy.vercel.app/'
     },
     {
       title: 'Movie Review Blog',
-      date: 'November 2024',
-      description: 'Designed a user-friendly interface with clean layout, readability, and light/dark theme toggling. Used HTML, CSS, and JavaScript to practice iterative development and design UI/UX components.',
+      date: 'January 2024',
+      description: 'A blogging platform for movie reviews built using HTML, CSS, and JavaScript.',
       githubLink: 'https://github.com/parthz-13/MovieReviewBlog',
       demoLink: 'https://parthz-13.github.io/MovieReviewBlog/'
     }
