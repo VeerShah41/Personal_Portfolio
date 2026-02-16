@@ -12,68 +12,134 @@
 }
 
 :root {
-  /* Modern Color Palette - Dark Theme with Vibrant Accents */
-  --bg-primary: #0a0e27;
-  --bg-secondary: #0f1422;
-  --bg-tertiary: #151b2e;
-  --text-primary: #ffffff;
-  --text-secondary: #b4bcd0;
-  --text-muted: #8892b0;
-  
-  /* Vibrant Gradient Accents */
-  --accent-primary: #6366f1;
-  --accent-secondary: #8b5cf6;
-  --accent-tertiary: #ec4899;
-  --accent-cyan: #06b6d4;
-  --accent-blue: #3b82f6;
-  
-  /* Gradient Combinations */
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-  --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
-  --gradient-glow: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3));
-  
-  /* Shadows & Glows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --glow-primary: 0 0 20px rgba(99, 102, 241, 0.5);
-  --glow-secondary: 0 0 40px rgba(139, 92, 246, 0.4);
+  /* 🚀 Tech-Focused Futuristic Theme - Calm & Sophisticated */
+  --bg-primary: #0a0e1a;
+  /* Deep Space Navy */
+  --bg-secondary: #0f1420;
+  /* Dark Tech Blue */
+  --bg-tertiary: #141b2e;
+  /* Midnight Blue */
+  --text-primary: #f8fafc;
+  /* Bright White */
+  --text-secondary: #cbd5e1;
+  /* Light Cool Gray */
+  --text-muted: #94a3b8;
+  /* Medium Slate */
+
+  /* ⚡ Futuristic Accent Colors */
+  --accent-primary: #00d4ff;
+  /* Electric Cyan */
+  --accent-secondary: #0ea5e9;
+  /* Sky Blue */
+  --accent-tertiary: #8b5cf6;
+  /* Soft Purple */
+  --accent-gold: #fbbf24;
+  /* Warm Gold */
+  --tech-cyan: #06b6d4;
+  /* Tech Cyan */
+  --neon-purple: #a78bfa;
+  /* Neon Purple */
+
+  /* 🌌 Sophisticated Gradients */
+  --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 50%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #a78bfa 100%);
+  --gradient-tech: linear-gradient(135deg, #06b6d4 0%, #00d4ff 50%, #0ea5e9 100%);
+  --gradient-cosmic: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(14, 165, 233, 0.08), rgba(139, 92, 246, 0.06));
+
+  /* ✨ Glassmorphism & Glows */
+  --glass-bg: rgba(15, 20, 32, 0.7);
+  --glass-border: rgba(0, 212, 255, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --glow-primary: 0 0 20px rgba(0, 212, 255, 0.4);
+  --glow-secondary: 0 0 25px rgba(14, 165, 233, 0.3);
+  --glow-tertiary: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* 🔹 Emerging Animation Keyframes */
+@keyframes emerge {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes stackReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(10deg) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body {
   background: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  background-image:
+    /* Overlay for readability with tech blue tint */
+    linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)),
+    /* Futuristic Network Pattern */
+    url('/network-bg.jpg');
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
   color: var(--text-primary);
   overflow-x: hidden;
-  cursor: none;
   line-height: 1.6;
+  perspective: 1000px;
 }
+
 
 .app {
   position: relative;
   z-index: 1;
 }
 
-/* 🔹 Header - Glassmorphism Design */
+/* 🔹 Header - Apple Glassmorphism Design */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 1.5rem 5%;
-  background: rgba(10, 14, 39, 0.8);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.3),
+    0 0 1px rgba(0, 212, 255, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -85,13 +151,22 @@ body {
   width: 100%;
   height: 1px;
   background: var(--gradient-primary);
-  opacity: 0.5;
+  opacity: 0.4;
   animation: shimmer 3s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-  0%, 100% { transform: translateX(-100%); opacity: 0; }
-  50% { transform: translateX(100%); opacity: 1; }
+
+  0%,
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
 }
 
 .logo {
@@ -101,13 +176,13 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
   transition: all 0.3s ease;
   letter-spacing: -0.5px;
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.8));
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
   transform: scale(1.05);
 }
 
@@ -150,7 +225,7 @@ body {
 .navbar a:hover,
 .navbar a.active {
   color: var(--text-primary);
-  text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 #menu-icon {
@@ -172,7 +247,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(10, 14, 39, 0.95);
+    background: rgba(10, 14, 26, 0.7);
     backdrop-filter: blur(20px);
     flex-direction: column;
     text-align: center;
@@ -181,7 +256,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-top: 1px solid rgba(99, 102, 241, 0.2);
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
   }
 
   .navbar.active {
@@ -201,7 +276,7 @@ body {
   }
 }
 
-/* 🔹 Home Section - Hero Design */
+/* 🔹 Home Section - Hero Design with Emerging Animation */
 .home {
   min-height: 100vh;
   display: flex;
@@ -212,6 +287,8 @@ body {
   position: relative;
   padding: 2rem;
   overflow: hidden;
+  animation: emerge 1.2s ease-out forwards;
+  opacity: 0;
 }
 
 .home::before {
@@ -221,15 +298,20 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .home-content {
@@ -244,7 +326,7 @@ body {
   z-index: 2;
 }
 
-/* 🔹 Profile Image - Modern Design */
+/* �️ Profile Image - Zoro's Warrior Aura */
 .home .img {
   width: 380px;
   height: 380px;
@@ -255,10 +337,10 @@ body {
   border: 3px solid transparent;
   background: var(--gradient-primary);
   padding: 3px;
-  box-shadow: 
-    0 0 40px rgba(99, 102, 241, 0.4),
-    0 0 80px rgba(139, 92, 246, 0.3),
-    0 0 120px rgba(236, 72, 153, 0.2);
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.3),
+    0 0 60px rgba(14, 165, 233, 0.2),
+    0 0 90px rgba(139, 92, 246, 0.15);
   animation: float 6s ease-in-out infinite;
   transition: all 0.4s ease;
 }
@@ -281,15 +363,22 @@ body {
 
 .home .img:hover {
   transform: scale(1.05);
-  box-shadow: 
-    0 0 60px rgba(99, 102, 241, 0.6),
-    0 0 120px rgba(139, 92, 246, 0.5),
-    0 0 180px rgba(236, 72, 153, 0.4);
+  box-shadow:
+    0 0 40px rgba(0, 212, 255, 0.4),
+    0 0 80px rgba(14, 165, 233, 0.3),
+    0 0 120px rgba(139, 92, 246, 0.2);
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .home .img img {
@@ -312,7 +401,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, rgba(139, 92, 246, 0.08) 40%, transparent 70%);
   animation: rotate 15s linear infinite;
   pointer-events: none;
   z-index: -1;
@@ -354,8 +443,15 @@ body {
 }
 
 @keyframes gradientFlow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .home .content p {
@@ -403,8 +499,8 @@ body {
 
 .home .content .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 
-    0 0 30px rgba(99, 102, 241, 0.6),
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.6),
     0 0 60px rgba(139, 92, 246, 0.4);
 }
 
@@ -440,21 +536,23 @@ body {
   box-shadow: 0 0 5px var(--accent-primary);
 }
 
-/* 🔹 Custom Cursor */
+/* �️ Custom Cursor - Zoro's Energy */
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   background: var(--accent-primary);
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
   transform: translate(-50%, -50%);
-  box-shadow: var(--glow-primary);
+  box-shadow:
+    0 0 15px rgba(0, 212, 255, 0.4),
+    0 0 25px rgba(14, 165, 233, 0.3);
   transition: transform 0.1s ease, opacity 0.1s ease;
-  mix-blend-mode: difference;
+  mix-blend-mode: screen;
 }
 
 .cursor-follower {
@@ -468,8 +566,9 @@ body {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
-  opacity: 0.5;
+  transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+  opacity: 0.6;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
 .cursor-follower-clicked {
@@ -478,11 +577,35 @@ body {
   border-color: var(--accent-tertiary);
 }
 
-/* 🔹 Section Styling */
+/* 🔹 Section Styling - Stack Card Effect */
 section {
   padding: 8rem 5%;
   position: relative;
   z-index: 1;
+  transform-style: preserve-3d;
+  animation: stackReveal 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Stack Card Effect - Each section stacks on scroll */
+section:nth-child(even) {
+  background: rgba(15, 20, 32, 0.6);
+  border-radius: 30px;
+  margin: 2rem 0;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 212, 255, 0.08);
+  transform: translateZ(20px);
+}
+
+section:nth-child(odd) {
+  background: transparent;
+  transform: translateZ(0);
+}
+
+/* Emerging animation on scroll */
+section.visible {
+  animation: emerge 1s ease-out forwards;
 }
 
 .section-title {
@@ -515,9 +638,6 @@ section {
 /* 🔹 About Section */
 .about {
   text-align: center;
-  background: var(--bg-secondary);
-  border-radius: 30px;
-  margin: 2rem 0;
 }
 
 .about .title {
@@ -535,10 +655,37 @@ section {
   margin-right: auto;
 }
 
-/* 🔹 Projects Section */
-.projects {
-  background: var(--bg-primary);
+/* 🌙 Itachi's Philosophy Quote */
+.itachi-quote {
+  margin-top: 3rem;
+  padding: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid var(--sharingan-red);
+  background: rgba(26, 20, 20, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(204, 0, 0, 0.15);
 }
+
+.quote-text {
+  font-size: 1.15rem !important;
+  font-style: italic;
+  color: var(--text-primary) !important;
+  line-height: 1.9 !important;
+  margin-bottom: 1rem !important;
+  text-align: left !important;
+}
+
+.quote-author {
+  font-size: 1rem !important;
+  color: var(--sharingan-red) !important;
+  font-weight: 600;
+  text-align: right !important;
+  margin-bottom: 0 !important;
+}
+
+/* 🔹 Projects Section - Styling handled by global section rules */
 
 .projects-container {
   display: grid;
@@ -548,16 +695,21 @@ section {
 }
 
 .project {
-  background: rgba(15, 20, 34, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 1px rgba(0, 212, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-align: left;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) translateZ(0);
 }
 
 .project::before {
@@ -567,7 +719,7 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -576,10 +728,11 @@ section {
 }
 
 .project:hover {
-  transform: translateY(-10px);
+  transform: perspective(1000px) rotateX(-2deg) translateY(-15px) translateZ(20px);
   border-color: var(--accent-primary);
-  box-shadow: 
-    var(--shadow-lg),
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(0, 212, 255, 0.4),
     var(--glow-primary);
 }
 
@@ -620,6 +773,7 @@ section {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project a {
@@ -660,12 +814,7 @@ section {
   box-shadow: var(--glow-primary);
 }
 
-/* 🔹 Skills Section */
-.Skills {
-  background: var(--bg-secondary);
-  border-radius: 30px;
-  margin: 2rem 0;
-}
+/* 🔹 Skills Section - Styling handled by global section rules */
 
 .Skills .title {
   text-align: center;
@@ -680,12 +829,15 @@ section {
 }
 
 .skill-section {
-  background: rgba(15, 20, 34, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 1px rgba(0, 212, 255, 0.2);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -698,7 +850,7 @@ section {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
   animation: rotate 15s linear infinite;
   pointer-events: none;
 }
@@ -706,7 +858,7 @@ section {
 .skill-section:hover {
   transform: translateY(-8px);
   border-color: var(--accent-primary);
-  box-shadow: 
+  box-shadow:
     var(--shadow-lg),
     var(--glow-primary);
 }
@@ -741,7 +893,7 @@ section {
 }
 
 .skill-section ul li:hover {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(0, 212, 255, 0.1);
   transform: translateX(10px);
   color: var(--text-primary);
 }
@@ -749,13 +901,12 @@ section {
 .skill-section ul li i {
   font-size: 1.5rem;
   color: var(--accent-primary);
-  filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.5));
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
 }
 
 /* 🔹 Education Section */
 .education {
   text-align: center;
-  background: var(--bg-primary);
 }
 
 .education-container {
@@ -766,12 +917,15 @@ section {
 }
 
 .education-item {
-  background: rgba(15, 20, 34, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 1px rgba(0, 212, 255, 0.2);
   transition: all 0.3s ease;
   text-align: left;
   position: relative;
@@ -785,7 +939,7 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -796,7 +950,7 @@ section {
 .education-item:hover {
   transform: translateY(-8px);
   border-color: var(--accent-primary);
-  box-shadow: 
+  box-shadow:
     var(--shadow-lg),
     var(--glow-primary);
 }
@@ -842,9 +996,6 @@ section {
 /* 🔹 Certifications Section */
 .certifications {
   text-align: center;
-  background: var(--bg-secondary);
-  border-radius: 30px;
-  margin: 2rem 0;
 }
 
 .certifications-container {
@@ -855,12 +1006,15 @@ section {
 }
 
 .certification-item {
-  background: rgba(15, 20, 34, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 1px rgba(0, 212, 255, 0.2);
   transition: all 0.3s ease;
   text-align: left;
   position: relative;
@@ -874,7 +1028,7 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -885,7 +1039,7 @@ section {
 .certification-item:hover {
   transform: translateY(-8px);
   border-color: var(--accent-primary);
-  box-shadow: 
+  box-shadow:
     var(--shadow-lg),
     var(--glow-primary);
 }
@@ -959,7 +1113,6 @@ section {
 /* 🔹 Social Section */
 .Social {
   text-align: center;
-  background: var(--bg-primary);
 }
 
 .social-container {
@@ -977,15 +1130,18 @@ section {
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-primary);
-  background: rgba(15, 20, 34, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 1.2rem 2rem;
   border-radius: 50px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 1px rgba(0, 212, 255, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -1018,21 +1174,18 @@ section {
 
 .social-link i {
   font-size: 1.5rem;
-  filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.5));
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
   transition: all 0.3s ease;
 }
 
 .social-link:hover i {
-  filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.8));
+  filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
   transform: scale(1.1);
 }
 
 /* 🔹 Resume Section */
 .resume {
   text-align: center;
-  background: var(--bg-secondary);
-  border-radius: 30px;
-  margin: 2rem 0;
 }
 
 .resume-container {
@@ -1050,15 +1203,18 @@ section {
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-primary);
-  background: rgba(15, 20, 34, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 1.2rem 2rem;
   border-radius: 50px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 1px rgba(0, 212, 255, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -1091,21 +1247,21 @@ section {
 
 .resume-link i {
   font-size: 1.5rem;
-  filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.5));
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
   transition: all 0.3s ease;
 }
 
 .resume-link:hover i {
-  filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.8));
+  filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
   transform: scale(1.1);
 }
 
 /* 🔹 Contact/Footer Section */
 .contact {
   padding: 5rem 5%;
-  background: var(--bg-primary);
+  background: transparent;
   text-align: center;
-  border-top: 1px solid rgba(99, 102, 241, 0.2);
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .contact .footer-content {
@@ -1135,9 +1291,10 @@ section {
   transition: all 0.3s ease;
   padding: 1rem 1.5rem;
   border-radius: 50px;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  background: rgba(15, 20, 34, 0.4);
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: rgba(15, 20, 32, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 .contact .contact-link:hover {
@@ -1150,12 +1307,12 @@ section {
 
 .contact .contact-link i {
   font-size: 1.3rem;
-  filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.5));
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
   transition: all 0.3s ease;
 }
 
 .contact .contact-link:hover i {
-  filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.8));
+  filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
   transform: scale(1.1);
 }
 
@@ -1207,4 +1364,3 @@ section {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   }
 }
-
